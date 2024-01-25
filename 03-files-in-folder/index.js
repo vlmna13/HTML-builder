@@ -12,7 +12,7 @@ fs.readdir(wayToFile, { withFileTypes: true }, (err, files) => {
               const name = path.parse(filePath).name;
               fs.stat(filePath, (err, stats) => {
                 const fileSize = (stats.size / 1024).toFixed(3);
-                console.log(`${name} - ${extension} - ${fileSize}}kb`);
+                console.log(`${name} - ${extension} - ${fileSize}kb`);
               });
             }
         });
