@@ -7,7 +7,7 @@ fs.readdir(wayToFile, { withFileTypes: true }, (err, files) => {
     } else {
         files.forEach((file) => {
             if (file.isFile()) {
-              const filePath = path.join(file.path, file.name);
+              const filePath = path.join(wayToFile, file.name);
               const extension = path.parse(filePath).ext.slice(1);
               const name = path.parse(filePath).name;
               fs.stat(filePath, (err, stats) => {
